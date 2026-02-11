@@ -1,9 +1,11 @@
-// Use override to ensure .env variables take precedence over existing system environment variables
 require("dotenv").config({ override: true });
 const app = require("./app");
+const initDb = require("./config/initDb");
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+initDb().then(() => {
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
 });
