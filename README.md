@@ -68,14 +68,6 @@ A robust and secure RESTful API built with Node.js, Express, and PostgreSQL. Thi
    npm start
    ```
 
-## ☁️ Deployment (Render.com)
-
-1. Connect your GitHub repository to Render.
-2. Create a **PostgreSQL** instance on Render.
-3. Create a **Web Service** and link the PostgreSQL instance.
-4. Add `DATABASE_URL` (Internal URL) and `JWT_SECRET` to the environment variables.
-5. The API will automatically initialize tables on the first run.
-
 ## 🔮 Future Implementations
 
 - **Refresh Tokens:** Implement a more robust session management system using refresh tokens.
